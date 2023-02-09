@@ -18,6 +18,8 @@ Users can run stuff like:
 console.log('hi world!');
 ```
 
+or
+
 ```ts
 const res = await fetch("https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty");
 console.log(res.status, await res.text());
@@ -45,10 +47,14 @@ for (let i = 0; i < 9000000000; i++) {
 }
 ```
 
+or
+
 ```ts
 // This hits an access error due to Deno permissions
 await Deno.writeTextFile("./hello.txt", "Hello World!");
 ```
+
+or
 
 ```ts
 // This won't error but the proxy returns (400, "only these URLs are allowed ...")
