@@ -1,4 +1,4 @@
-# ts-sandbox
+# deno-script-sandbox
 
 I wanted to sandbox some JavaScript/TypeScript code and this is the best idea I could come up with given a few hours coding time.
 
