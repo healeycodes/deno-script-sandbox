@@ -27,6 +27,7 @@ globalThis.fetch = (
 };
 
 try {
+  // Here's where we run user code
   await import(scriptPath);
 } catch (e) {
   console.error(e);
