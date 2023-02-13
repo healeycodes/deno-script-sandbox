@@ -1,5 +1,9 @@
 # deno-script-sandbox
 
+> My blog post: [Sandboxing JavaScript Code](https://healeycodes.com/sandboxing-javascript-code)
+
+<br>
+
 I wanted to sandbox some JavaScript/TypeScript code and this is the best idea I could come up with given a few hours coding time.
 
 I'm not a security engineer so run this at your absolute peril.
