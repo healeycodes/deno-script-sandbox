@@ -11,7 +11,7 @@ const SCRIPT_MEMORY_LIMIT = 64; // mb
 const SCRIPT_REQUEST_LIMIT = 5; // number of requests per script
 
 const CONCURRENCY_LIMIT = 3;
-const conurrencyMutex = new Semaphore(CONCURRENCY_LIMIT);
+const concurrencyMutex = new Semaphore(CONCURRENCY_LIMIT);
 
 // Track scripts that are running so that we can:
 // - auth requests to the proxy
@@ -39,7 +39,7 @@ async function handler(req: Request) {
       `scriptPath=${scriptPath}`,
     ];
 
-    const release = await conurrencyMutex.acquire();
+    const release = await concurrencyMutex.acquire();
     const scriptProcess = Deno.run({ cmd, stderr: "piped", stdout: "piped" });
     release();
 
